@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sohil Marble | Premium Marble Collection</title>
+
+    <meta name="description" content="Sohil Marble - Premium marble, granite and natural stone collection by Sohil Khan.">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-mark">S</div>
+        <div>
+            <h2>SOHIL MARBLE</h2>
+            <span>Premium Natural Stone</span>
+        </div>
+    </div>
+
+    <nav id="navMenu">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <button class="cart-button" onclick="openCart()">
+            🛒 <span id="cartCount">0</span>
+        </button>
+
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <p class="eyebrow">PREMIUM NATURAL STONE</p>
+
+        <h1>
+            Beauty carved<br>
+            <span>in stone.</span>
+        </h1>
+
+        <p class="hero-text">
+            Discover premium marble and granite collections
+            crafted to transform your spaces into timeless masterpieces.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#collection" class="primary-btn">Explore Collection</a>
+            <a href="#contact" class="secondary-btn">Get A Quote</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STATS -->
+<section class="stats">
+
+    <div>
+        <strong>100+</strong>
+        <span>Stone Designs</span>
+    </div>
+
+    <div>
+        <strong>Premium</strong>
+        <span>Quality Selection</span>
+    </div>
+
+    <div>
+        <strong>Custom</strong>
+        <span>Bulk Orders</span>
+    </div>
+
+    <div>
+        <strong>Direct</strong>
+        <span>Owner Assistance</span>
+    </div>
+
+</section>
+
+
+<!-- COLLECTION -->
+<section class="collection-section" id="collection">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">OUR COLLECTION</p>
+
+            <h2>
+                Find your perfect
+                <span>stone.</span>
+            </h2>
+        </div>
+
+        <p>
+            Explore our selection of premium marble and granite
+            for homes, hotels, offices and luxury interiors.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+    <div class="shop-tools">
+
+        <div class="search-box">
+            🔍
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search marble or granite..."
+                onkeyup="filterProducts()"
+            >
+        </div>
+
+        <div class="filters">
+
+            <button class="filter active" onclick="filterCategory('all', this)">
+                All
+            </button>
+
+            <button class="filter" onclick="filterCategory('marble', this)">
+                Marble
+            </button>
+
+            <button class="filter" onclick="filterCategory('granite', this)">
+                Granite
+            </button>
+
+            <button class="filter" onclick="filterCategory('premium', this)">
+                Premium
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PRODUCTS -->
+    <div class="products-grid" id="productsGrid">
+
+        <!-- PRODUCT 1 -->
+        <article class="product-card"
+            data-category="marble premium"
+            data-name="Italian White Marble">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1000&q=85"
+                    alt="Italian White Marble"
+                >
+
+                <span class="badge">Premium</span>
+
+                <button
+                    class="quick-cart"
+                    onclick="addToCart('Italian White Marble', 250)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-type">MARBLE</p>
+
+                <h3>Italian White Marble</h3>
+
+                <p>
+                    Elegant white surface with a luxurious natural vein pattern.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹250 / sq.ft.</strong>
+                    </div>
+
+                    <button onclick="addToCart('Italian White Marble', 250)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 2 -->
+        <article class="product-card"
+            data-category="marble"
+            data-name="Makrana White Marble">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1615874694520-474822394e73?auto=format&fit=crop&w=1000&q=85"
+                    alt="Makrana White Marble"
+                >
+
+                <span class="badge">Popular</span>
+
+                <button
+                    class="quick-cart"
+                    onclick="addToCart('Makrana White Marble', 180)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-type">MARBLE</p>
+
+                <h3>Makrana White Marble</h3>
+
+                <p>
+                    Classic natural white marble with timeless Indian elegance.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹180 / sq.ft.</strong>
+                    </div>
+
+                    <button onclick="addToCart('Makrana White Marble', 180)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 3 -->
+        <article class="product-card"
+            data-category="granite"
+            data-name="Majestic Black Granite">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1000&q=85"
+                    alt="Black Granite"
+                >
+
+                <span class="badge">Trending</span>
+
+                <button
+                    class="quick-cart"
+                    onclick="addToCart('Majestic Black Granite', 65)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-type">GRANITE</p>
+
+                <h3>Majestic Black Granite</h3>
+
+                <p>
+                    Deep black stone with a bold and sophisticated finish.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹65 / sq.ft.</strong>
+                    </div>
+
+                    <button onclick="addToCart('Majestic Black Granite', 65)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 4 -->
+        <article class="product-card"
+            data-category="granite"
+            data-name="Apple Green Granite">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+                    alt="Green Granite"
+                >
+
+                <span class="badge">New</span>
+
+                <button
+                    class="quick-cart"
+                    onclick="addToCart('Apple Green Granite', 75)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-type">GRANITE</p>
+
+                <h3>Apple Green Granite</h3>
+
+                <p>
+                    Distinctive green tones for bold and beautiful interiors.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹75 / sq.ft.</strong>
+                    </div>
+
+                    <button onclick="addToCart('Apple Green Granite', 75)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 5 -->
+        <article class="product-card"
+            data-category="marble premium"
+            data-name="Rosy Pink Marble">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+                    alt="Rosy Pink Marble"
+                >
+
+                <span class="badge">Premium</span>
+
+                <button
+                    class="quick-cart"
+                    onclick="addToCart('Rosy Pink Marble', 120)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-type">MARBLE</p>
+
+                <h3>Rosy Pink Marble</h3>
+
+                <p>
+                    Warm pink tones that create an elegant premium atmosphere.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹120 / sq.ft.</strong>
+                    </div>
+
+                    <button onclick="addToCart('Rosy Pink Marble', 120)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRODUCT 6 -->
+        <article class="product-card"
+            data-category="marble premium"
+            data-name="Classic Beige Marble">
+
+            <div class="product-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+                    alt="Beige Marble"
+                >
+
+                <span class="badge">Luxury</span>
+
+                <button
+                    class="quick-cart"
+                    onclick="addToCart('Classic Beige Marble', 150)"
+                >
+                    +
+                </button>
+
+            </div>
+
+            <div class="product-info">
+
+                <p class="product-type">MARBLE</p>
+
+                <h3>Classic Beige Marble</h3>
+
+                <p>
+                    Soft beige tones designed for warm and luxurious spaces.
+                </p>
+
+                <div class="product-bottom">
+
+                    <div>
+                        <small>Starting from</small>
+                        <strong>₹150 / sq.ft.</strong>
+                    </div>
+
+                    <button onclick="addToCart('Classic Beige Marble', 150)">
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+
+    <div class="about-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+            alt="Premium marble interior"
+        >
+
+    </div>
+
+    <div class="about-content">
+
+        <p class="eyebrow">ABOUT SOHIL MARBLE</p>
+
+        <h2>
+            Stone that makes
+            <span>spaces special.</span>
+        </h2>
+
+        <p>
+            Sohil Marble is focused on bringing beautiful natural stone
+            collections to customers looking for quality, elegance and
+            value.
+        </p>
+
+        <p>
+            Whether you are building a home, hotel, office or commercial
+            project, we help you find the right marble or granite for
+            your requirements.
+        </p>
+
+        <div class="owner-box">
+
+            <div class="owner-avatar">
+                SK
+            </div>
+
+            <div>
+                <small>FOUNDER & OWNER</small>
+                <strong>Sohil Khan</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="why-section">
+
+    <div class="section-title-center">
+
+        <p class="eyebrow">WHY CHOOSE US</p>
+
+        <h2>
+            Quality you can
+            <span>see.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="feature-icon">◆</div>
+            <h3>Premium Selection</h3>
+            <p>
+                Carefully selected marble and granite designs for modern spaces.
+            </p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">✓</div>
+            <h3>Quality Focused</h3>
+            <p>
+                We focus on beautiful finish, durability and dependable quality.
+            </p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">₹</div>
+            <h3>Competitive Pricing</h3>
+            <p>
+                Get attractive prices for retail as well as bulk requirements.
+            </p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">↗</div>
+            <h3>Bulk Orders</h3>
+            <p>
+                Contact us for larger projects and customized requirements.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+
+    <div class="contact-content">
+
+        <p class="eyebrow">GET IN TOUCH</p>
+
+        <h2>
+            Let's build something
+            <span>beautiful.</span>
+        </h2>
+
+        <p>
+            Tell us what marble or granite you need.
+            We will help you find the right option.
+        </p>
+
+        <div class="contact-details">
+
+            <div>
+                <span>OWNER</span>
+                <strong>Sohil Khan</strong>
+            </div>
+
+            <div>
+                <span>PHONE</span>
+                <strong>+91 91160 07402</strong>
+            </div>
+
+            <div>
+                <span>LOCATION</span>
+                <strong>Rajasthan, India</strong>
+            </div>
+
+        </div>
+
+        <a
+            href="https://wa.me/919116007402?text=Hello%20Sohil%20Khan%2C%20I%20am%20interested%20in%20your%20marble%20collection."
+            target="_blank"
+            class="whatsapp-btn"
+        >
+            💬 Chat on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-logo">
+        <div class="logo-mark">S</div>
+        <div>
+            <h3>SOHIL MARBLE</h3>
+            <p>Premium Natural Stone</p>
+        </div>
+    </div>
+
+    <p>
+        © 2026 Sohil Marble. All Rights Reserved.
+    </p>
+
+    <p>
+        Owned by <strong>Sohil Khan</strong>
+    </p>
+
+</footer>
+
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
+
+    <div class="cart-panel">
+
+        <div class="cart-header">
+
+            <h2>Your Enquiry Cart</h2>
+
+            <button onclick="closeCart()">×</button>
+
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">
+                Your cart is empty.
+            </p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Estimated Total</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <button onclick="sendWhatsApp()" class="checkout-btn">
+                Send Enquiry on WhatsApp
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TOAST -->
+<div id="toast" class="toast">
+    Added to enquiry cart ✓
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
